@@ -1,0 +1,12 @@
+{
+    "MISSING_ALL_BODY_VALUE": {
+        "EN": "All values is missing please try again.",
+        "GU": "બધા મૂલ્યો ખૂટે છે કૃપા કરીને ફરી પ્રયાસ કરો.",
+        "HD": "सभी मान गायब हैं कृपया पुनः प्रयास करें।"
+    },
+    "MISSING_PARAMETER_VALUE": {
+        "EN": "Parameter is missing please try again.",
+        "GU": "કોઈપણ પરિમાણ ખૂટે છે કૃપા કરીને ફરી પ્રયાસ કરો.",
+        "HD": "पैरामीटर गुम है कृपया पुनः प्रयास करें।"
+    }
+}
