@@ -3,20 +3,19 @@ const controller = require('../controllers/admin');
 const statusCode = require('../common/status-list');
 const message = require('../common/message-list');
 const jsonResponse = require('../common/json-response');
+const { getAllDataApiSwagger } = require('../common/swagger-api-docs');
 const admin = express.Router();
 
 
 admin.get('/', async (req, res) => {
-    if (req?.body?.length == undefined) {
-        jsonResponse(res, statusCode.conflict, message.MISSING_ALL_BODY_VALUE[req?.headers['accept-language']], null);
-        return;
-    } else {
+    try {
         controller.getAdmins(req, res)
+    } catch (error) {
+        console.log(error)
     }
 })
 
 admin.get('/:id', async (req, res) => {
-    console.log(req?.params)
     if (!req?.params?.id) {
         jsonResponse(res, statusCode.conflict, message.MISSING_PARAMETER_VALUE[req?.headers['accept-language']], null);
         return;
